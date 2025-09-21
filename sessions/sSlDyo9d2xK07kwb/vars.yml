@@ -1,0 +1,6 @@
+client_user: ubuntu
+dest_path: /home/ali/backups
+public_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP6eGLLNgNzQvQX63wERZWbHfqOCMZQ05Q38xKYqYIh4
+  samra@samra-HP-EliteBook-840-G1
+src_paths:
+- /home/samra/Downloads/check

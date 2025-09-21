@@ -1,0 +1,15 @@
+{
+  "token": "sSlDyo9d2xK07kwb",
+  "status": "transfer_failed",
+  "src_paths": [
+    "/home/samra/Downloads/check"
+  ],
+  "dest_path": "/home/ali/backups",
+  "client_host": "ali",
+  "client_user": "ubuntu",
+  "expected_size_bytes": 467003,
+  "started_at": 1758453215.757639,
+  "finished_at": 1758453220.6545887,
+  "transfer_rc": 4,
+  "cleanup_rc": 4
+}

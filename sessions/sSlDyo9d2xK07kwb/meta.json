@@ -1,0 +1,19 @@
+{
+  "token": "sSlDyo9d2xK07kwb",
+  "created_at": 1758452328.2589319,
+  "src_paths": [
+    "/home/samra/Downloads/check"
+  ],
+  "dest_path": "/home/ali/backups",
+  "status": "transfer_failed",
+  "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP6eGLLNgNzQvQX63wERZWbHfqOCMZQ05Q38xKYqYIh4 samra@samra-HP-EliteBook-840-G1",
+  "client_host": "ali",
+  "client_user": "ubuntu",
+  "expected_size_bytes": 467003,
+  "started_at": 1758453215.757639,
+  "transfer_rc": 4,
+  "transfer_logfile": "/home/samra/secure_file_transfer_fixed/sessions/sSlDyo9d2xK07kwb/ansible_transfer.log",
+  "finished_at": 1758453220.6545887,
+  "cleanup_rc": 4,
+  "cleanup_logfile": "/home/samra/secure_file_transfer_fixed/sessions/sSlDyo9d2xK07kwb/ansible_cleanup.log"
+}

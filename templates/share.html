@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Share Link</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #0077cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    main {
+      max-width: 700px;
+      background: #fff;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0077cc;
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    a {
+      color: #0077cc;
+      font-weight: bold;
+      word-break: break-all;
+    }
+
+    pre {
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      border-left: 4px solid #0077cc;
+    }
+
+    .tip {
+      background: #f0f8ff;
+      padding: 15px;
+      border-left: 4px solid #0077cc;
+      border-radius: 4px;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🔗 Share Secure Transfer Link</h1>
+</header>
+
+<main>
+  <h2>Share this URL with your client (one-time):</h2>
+  <p><a href="{{ accept_url }}">{{ accept_url }}</a></p>
+
+  <h3>Client Instructions (run on client machine):</h3>
+  <pre>
+# On client machine (run exactly once to accept public key):
+mkdir -p ~/.ssh && chmod 700 ~/.ssh
+echo '{{ public_key }}' >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+
+# Then open the link above in a browser and click "Accept"
+  </pre>
+
+  <div class="tip">
+    💡 <strong>Tip:</strong> After the transfer completes, the system will automatically remove the temporary key for security.
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Secure File Transfer Demo
+</footer>
+
+</body>
+</html>

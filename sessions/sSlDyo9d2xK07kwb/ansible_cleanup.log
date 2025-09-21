@@ -1,0 +1,9 @@
+
+PLAY [Remove ephemeral public key from client's authorized_keys] ***************
+
+TASK [Gathering Facts] *********************************************************
+fatal: [client]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: Could not resolve hostname ali: Temporary failure in name resolution", "unreachable": true}
+
+PLAY RECAP *********************************************************************
+client                     : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+

@@ -1,0 +1,10 @@
+{
+  "token": "GBJydP-BkFvXBmk0",
+  "created_at": 1758476718.2046735,
+  "src_paths": [
+    "/home/samra/Downloads/check"
+  ],
+  "dest_path": "/home/samra/Downloads/",
+  "status": "waiting_for_client",
+  "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOqLeKWuNZM68XPY5zAlpwD/R/+n3nvWNHgV5iHhcVwc samra@samra-HP-EliteBook-840-G1"
+}

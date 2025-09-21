@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Automated File Transfer</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #0077cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    main {
+      max-width: 700px;
+      background: #fff;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0077cc;
+      margin-top: 0;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #0077cc;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+
+    .tip {
+      background: #f0f8ff;
+      padding: 15px;
+      border-left: 4px solid #0077cc;
+      border-radius: 4px;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Secure Automated File Transfer System</h1>
+</header>
+
+<main>
+  <h2>Flask + Ansible + SSH Demo</h2>
+  <p>Enter the source and destination paths below to start a secure transfer session.</p>
+
+  <form action="/create_session" method="post">
+    <label for="src_paths">Source paths (comma-separated absolute paths):</label>
+    <input id="src_paths" name="src_paths" placeholder="/home/you/photos,/home/you/videos">
+
+    <label for="dest_path">Destination path on client:</label>
+    <input id="dest_path" name="dest_path" placeholder="/home/client/received_files">
+
+    <button type="submit">Create Session & Generate Link</button>
+  </form>
+
+  <div class="tip">
+    💡 <strong>Tip:</strong> Use <em>absolute paths</em> and ensure <code>rsync</code> &amp; <code>ssh</code> work between sender and client.
+  </div>
+</main>
+
+<footer>
+  &copy; 2025 Secure File Transfer Demo
+</footer>
+
+</body>
+</html>

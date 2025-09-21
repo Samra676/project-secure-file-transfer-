@@ -1,0 +1,10 @@
+---
+- name: Remove ephemeral public key from client's authorized_keys
+  hosts: target
+  become: false
+  tasks:
+    - name: Remove temporary public key for the client user
+      authorized_key:
+        user: "{{ client_user }}"
+        key: "{{ public_key }}"
+        state: absent

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Session Status</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fb;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #0077cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+    }
+
+    main {
+      max-width: 900px;
+      background: #fff;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0077cc;
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #333;
+    }
+
+    pre {
+      background: #f0f8ff;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      border-left: 4px solid #0077cc;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    .log {
+      background: #111;
+      color: #0f0;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.9rem;
+      border-left: 4px solid #0077cc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📊 Secure Transfer – Session Status</h1>
+</header>
+
+<main>
+  <h2>Session Metadata</h2>
+  <pre>{{ meta | tojson(indent=2) }}</pre>
+
+  <h3>Transfer Log (tail)</h3>
+  <div class="log">{{ transfer_log }}</div>
+
+  <h3>Cleanup Log (tail)</h3>
+  <div class="log">{{ cleanup_log }}</div>
+
+  <h3>Report (Summary)</h3>
+  <pre>{{ report }}</pre>
+</main>
+
+<footer>
+  &copy; 2025 Secure File Transfer Demo
+</footer>
+
+</body>
+</html>

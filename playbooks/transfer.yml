@@ -1,0 +1,21 @@
+---
+- name: Transfer selected paths to client
+  hosts: target
+  become: false
+  vars:
+    # src_paths and dest_path provided via vars.yml
+  tasks:
+    - name: Ensure destination directory exists
+      file:
+        path: "{{ dest_path }}"
+        state: directory
+        mode: '0755'
+        owner: "{{ client_user }}"
+
+    - name: Transfer each source path using rsync (synchronize)
+      synchronize:
+        src: "{{ item }}"
+        dest: "{{ dest_path }}/"
+        archive: yes
+        delete: no
+      loop: "{{ src_paths }}"
